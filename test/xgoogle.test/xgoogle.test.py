@@ -7,11 +7,14 @@ import sys
 
 from xgoogle_unoporuno.search import GoogleSearch, SearchError
 
-print 'hola mundo'
+print 'bonjour tout le monde'
 
 gs = GoogleSearch(sys.argv[1], True, False, 'fr')
 gs.results_per_page = 10
 results = gs.get_results()
+
+print len(results)
+
 for r in results:
     titulo = r.title.encode('utf-8')
     descripcion = r.desc.encode('utf-8')

@@ -203,6 +203,7 @@ class GoogleSearch(object):
         
         try:
             page = self.browser.get_page(safe_url)
+            #print page
         except BrowserError, e:
             raise SearchError, "Failed getting %s: %s" % (e.url, e.error)
 
@@ -227,6 +228,9 @@ class GoogleSearch(object):
 
     def _extract_results(self, soup):
         results = soup.findAll('li', {'class': 'g'})
+        results += soup.findAll('div', {'class': 'g'})
+
+		
         ret_res = []
         for result in results:
             eres = self._extract_result(result)
