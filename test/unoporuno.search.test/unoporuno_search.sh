@@ -1,1 +1,1 @@
-python ~/cidesal/unoporuno/scripts/unoporuno_search.py albert.einstein.test.csv results/
+python ~/Documents/IIMAS/unoporuno/scripts/unoporuno_search.py albert.einstein.test.csv results/

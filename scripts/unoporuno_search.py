@@ -43,11 +43,12 @@ from lxml import etree
 
 logging.basicConfig(level=logging.DEBUG)
 config = ConfigParser.ConfigParser()
-config.read("unoporuno.conf")
+#Path to config file
+config.read("/home/urb/PycharmProjects/unoporuno/config/unoporuno.conf")
 if len(config.sections())==0:
     config.read(os.environ['HOME']+"/.unoporuno/unoporuno.conf")
     if len(config.sections())==0:
-               logging.error("No configuration file on unoporuno.conf")
+               logging.error(" No configuration file on unoporuno.conf")
                exit(-1)
 UNOPORUNO_ROOT = config.get('unoporuno', 'root')
 UNOPORUNO_PATH = UNOPORUNO_ROOT + '/module/'

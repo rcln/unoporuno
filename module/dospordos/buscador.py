@@ -40,6 +40,11 @@
 #         a) Quitar el query del snippet para que no se repitan, salvo por la descripción o el título
 #         b) Traducir los lugares geográficos
 #         c) Implementar filtro semántico
+"""
+    ToDo
+        -Check the deprecated methods of nltk
+        
+"""
 
 
 
@@ -48,7 +53,7 @@ __date__ ="$03-abr-2011 10:05:30$"
 
 import sys, re, time, os, nltk
 import ConfigParser, logging, time
-import tempfile, libmorfo_python
+import tempfile, freeling
 
 import yql
 from lxml import etree
@@ -57,6 +62,7 @@ from xgoogle_unoporuno.translate import LanguageDetector, DetectionError
 
 UNO_ROOT = ''
 FREELING_LIB = ''
+
 FREELING_DATA = ''
 RESEARCH_ESA = ''
 #segundos que hay que dejar pasar entre dos consultas google
@@ -1321,7 +1327,7 @@ class Freeling:
         self.mw = multi_word
         
         logging.debug('Starting Freeling with LIB='+FREELING_LIB+' and DATA='+FREELING_DATA)
-        op=libmorfo_python.maco_options(self.lang)
+        op=freeling.maco_options(self.lang)
         if self.ne: i_ne = 0
         else: i_ne = 2
         if self.mw: i_mw = 1
@@ -1333,12 +1339,12 @@ class Freeling:
                           datalang_dir+'probabilitats.dat', datalang_dir+'maco.db', datalang_dir+'np.dat', \
                           FREELING_DATA+'/common/punct.dat', datalang_dir+'corrector/corrector.dat')
         
-        self._tk=libmorfo_python.tokenizer(datalang_dir+"/tokenizer.dat")
-        self._sp=libmorfo_python.splitter(datalang_dir+"/splitter.dat")
-        self._mf=libmorfo_python.maco(op)
+        self._tk=freeling.tokenizer(datalang_dir+"/tokenizer.dat")
+        self._sp=freeling.splitter(datalang_dir+"/splitter.dat")
+        self._mf=freeling.maco(op)
 
-        self._tg=libmorfo_python.hmm_tagger(self.lang,datalang_dir+"/tagger.dat",1,2)
-        self._sen=libmorfo_python.senses(datalang_dir+"/senses30.db",0)
+        self._tg=freeling.hmm_tagger(self.lang,datalang_dir+"/tagger.dat",1,2)
+        self._sen=freeling.senses(datalang_dir+"/senses30.db",0)
 
     def tokenize(self,line):
         return self._tk.tokenize(line)
