@@ -40,13 +40,6 @@
 #         a) Quitar el query del snippet para que no se repitan, salvo por la descripción o el título
 #         b) Traducir los lugares geográficos
 #         c) Implementar filtro semántico
-"""
-    ToDo
-        -Check the deprecated methods of nltk
-        
-"""
-
-
 
 __author__="Jorge García Flores"
 __date__ ="$03-abr-2011 10:05:30$"
