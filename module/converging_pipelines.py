@@ -29,7 +29,9 @@ UNOPORUNO_PATH = '/home/harmodio/cidesal/code/unoporuno/module/'
 if not UNOPORUNO_PATH in sys.path:
     sys.path.append(UNOPORUNO_PATH)
 
-from unoporuno.buscador import BuscadorDiasporas, ErrorBuscador
+#Before:
+#from unoporuno.buscador import BuscadorDiasporas, ErrorBuscador
+from dospordos.buscador import BuscadorDiasporas, ErrorBuscador
 import time, logging, re, os, copy
 
 COLUMN_SEPARATOR = '|'
