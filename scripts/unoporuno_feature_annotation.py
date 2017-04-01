@@ -30,7 +30,7 @@
       USAGE helo-to-xml.py <csv file> <path to a directory where the files will be saved>
 """
 
-import logging, ConfigParser, sys, re
+import logging, ConfigParser, sys, re, os
 
 logging.basicConfig(level=logging.INFO)
 config = ConfigParser.ConfigParser()

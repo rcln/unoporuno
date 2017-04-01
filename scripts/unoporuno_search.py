@@ -43,7 +43,7 @@ from lxml import etree
 
 logging.basicConfig(level=logging.DEBUG)
 config = ConfigParser.ConfigParser()
-#Path to config file
+#Path to config file, original: unoporuno.conf
 config.read("/home/urb/PycharmProjects/unoporuno/config/unoporuno.conf")
 if len(config.sections())==0:
     config.read(os.environ['HOME']+"/.unoporuno/unoporuno.conf")

@@ -23,7 +23,7 @@
 #
 
 
-import logging, ConfigParser, sys
+import logging, ConfigParser, sys, os
 from lxml import etree
 
 logging.basicConfig(level=logging.INFO)
