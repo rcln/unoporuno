@@ -44,7 +44,7 @@
 __author__="Jorge García Flores"
 __date__ ="$03-abr-2011 10:05:30$"
 
-import sys, re, time, os, nltk
+import re, os, nltk
 import ConfigParser, logging, time
 import tempfile, freeling
 
