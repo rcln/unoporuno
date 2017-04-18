@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/webapp/cidesal/unoporuno" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/module/dospordos" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/webapp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/webapp/cidesal" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -46,7 +46,6 @@ class Busqueda_DB(object):
             sys.path.append(self.webapp_path)
             sys.path.append(self.webapp_path+'cidesal/')
         from unoporuno.models import Busqueda, Persona, Snippet
-        
         self.busqueda = Busqueda()
         self.busqueda.nombre = name
         self.busqueda.fecha = datetime.datetime.now()
